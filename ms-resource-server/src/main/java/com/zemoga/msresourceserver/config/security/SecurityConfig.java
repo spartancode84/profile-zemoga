@@ -12,6 +12,7 @@ import org.springframework.security.oauth2.jwt.JwtDecoders;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
 import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 /**
  * @project profile-zemoga
@@ -51,7 +52,7 @@ public class SecurityConfig {
     }*/
 
     private static final String[] USER_RESOURCES = {"/loans/**"};
-    private static final String[] ADMIN_RESOURCES = {"/bussinnes/**"};
+    private static final String[] ADMIN_RESOURCES = {"/profile/**", "/bussinnes/**"};
     private static final String ROLE_ADMIN = "ADMIN";
     private static final String ROLE_USER = "USER";
 }
